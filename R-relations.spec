@@ -1,10 +1,10 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  relations
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          0.6
-Release:          1
+Release:          2
 Summary:          Data Structures and Algorithms for Relations
 Group:            Sciences/Mathematics
 License:          GPL-2
