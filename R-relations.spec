@@ -10,19 +10,16 @@ Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
-Requires:         R-sets 
-Requires:         R-cluster R-stats R-slam 
-%if %{with bootstrap}
-Requires:         R-Rgraphviz R-Rglpk R-lpSolve R-Rsymphony 
-%else
-Requires:         R-Rgraphviz R-clue R-Rglpk R-lpSolve R-Rsymphony 
+Requires:         R-sets R-cluster R-stats R-slam R-Rgraphviz
+Requires:         R-Rglpk R-lpSolve R-Rsymphony 
+%if %{without bootstrap}
+Requires:         R-clue
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-sets
-BuildRequires:    R-cluster R-stats R-slam 
-%if %{with bootstrap}
-BuildRequires:    R-Rgraphviz R-Rglpk R-lpSolve R-Rsymphony 
-%else
-BuildRequires:    R-Rgraphviz R-clue R-Rglpk R-lpSolve R-Rsymphony 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-sets R-cluster R-stats R-slam R-Rgraphviz
+BuildRequires:    R-Rglpk R-lpSolve R-Rsymphony 
+%if %{without bootstrap}
+BuildRequires:    R-clue
 %endif
 
 %description
