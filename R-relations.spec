@@ -22,6 +22,8 @@ BuildRequires:    R-Rglpk R-lpSolve R-Rsymphony
 BuildRequires:    R-clue
 %endif
 
+%define debug_package %{nil}
+
 %description
 Data structures and algorithms for k-ary relations with arbitrary domains,
 featuring relational algebra, predicate functions, and fitters for
