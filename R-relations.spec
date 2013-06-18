@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          0.6
-Release:          2
+Release:          3
 Summary:          Data Structures and Algorithms for Relations
 Group:            Sciences/Mathematics
 License:          GPL-2
